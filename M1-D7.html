@@ -1,9 +1,71 @@
-<html>
-<title>Stephanie's Smartphone Shop Website</title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="vewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie's Smartphone Shop Website</title>
+    <style>
+        .Heading1 {
+            color: white;
+            background: black;
+        }
+
+        #mystyleh1 {
+            color: red;
+        }
+
+        body {
+            background: purple;
+        }
+
+        div {
+            background: peru;
+        }
+
+        .strive {
+            background: lightblue;
+        }
+
+        #specialone {
+            background: lightcoral;
+        }
+
+        img {
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 8px;
+
+        }
+
+        .mapouter {
+            position: relative;
+            text-align: center;
+            height: 215px;
+            width: 1037px;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 215px;
+            width: 1037px;
+        }
+
+        /* rule of specifitiy: inline stle> ID> class>tag*/
+    </style>
 </head>
 
 <body>
-    <h1 id="Heading 1">Stephanie's Smartphone Shop Website</h1>
+    <header>
+        <h1 class="Heading1" onclick="changeTitle()" onmousemove="addClassToTitle()"
+            onmouseleave="removeClassToTitle()">
+            Stephanie's Smartphone Shop Website</h1>
+        <div id="Button_functions">
+            <button id="Change_Title" onclick="changeTitleD6()">Change Title</button>
+            <button id="Change_BG" onclick="changeBg()">Change BG</button>
+        </div>
+    </header>
     <h2 id="Top 5 products">Top 5 products </h2>
     <h3>See what phones are flying out of our store this week!</h3>
     <h2 id="listTitle">To do List</h2>
@@ -20,7 +82,9 @@
         <li>3rd</li>
     </ul>
     <div>
-        <p>This text is just for the exercise</p>
+        <p>This text is just for the exercise</p><button onclick="changePContent()">Click me to change
+            text</button>
+
     </div>
     <table style="width:100%">
         <tr>
@@ -31,9 +95,12 @@
         </tr>
         <tr>
             <th><img src="phone1.jpg" alt="The Top Selling Phone" style="width:200px;height:100px;">
-            <td>Hot Phone 1 <br> <button type="button"> <a
+            <td>Hot Phone 1 <br>
+                <button type="button"> <a
                         href='https://www.amazon.co.uk/Ulefone-Note-Smartphones-Unlocked-Fingerprint/dp/B07V1PKPFX/ref=redir_mobile_desktop?ie=UTF8&aaxitk=nZgjyPUNVB5z4VYBu.PekA&hsa_cr_id=8159910840502&ref_=sbx_be_s_sparkle_mcd_asin_1'
-                        target='_blank'>Buy Now</a></button></td>
+                        target='_blank'>Buy Now</a>
+                </button>
+            </td>
             <td>
                 <ul>
                     <li>Waterproof</li>
@@ -45,9 +112,12 @@
         </tr>
         <tr>
             <th><img src="phone2.jpg" alt="2nd Top Selling Phone" style="width:200px;height:100px;">
-            <td>Hot Phone 2 <br> <button type="button"> <a
+            <td>Hot Phone 2 <br>
+                <button type="button"> <a
                         href='https://www.amazon.co.uk/Ulefone-Note-Smartphones-Unlocked-Fingerprint/dp/B07V1PKPFX/ref=redir_mobile_desktop?ie=UTF8&aaxitk=nZgjyPUNVB5z4VYBu.PekA&hsa_cr_id=8159910840502&ref_=sbx_be_s_sparkle_mcd_asin_1'
-                        target='_blank'>Buy Now</a></button></td>
+                        target='_blank'>Buy Now</a>
+                </button>
+            </td>
             <td>
                 <ul>
                     <li>Waterproof</li>
@@ -59,9 +129,12 @@
         </tr>
         <tr>
             <th><img src="phone3.jpg" alt="3rd Top Selling Phone" style="width:200px;height:100px;">
-            <td>Hot Phone 3 <br> <button type="button"> <a
+            <td>Hot Phone 3 <br>
+                <button type="button"> <a
                         href='https://www.amazon.co.uk/Ulefone-Note-Smartphones-Unlocked-Fingerprint/dp/B07V1PKPFX/ref=redir_mobile_desktop?ie=UTF8&aaxitk=nZgjyPUNVB5z4VYBu.PekA&hsa_cr_id=8159910840502&ref_=sbx_be_s_sparkle_mcd_asin_1'
-                        target='_blank'>Buy Now</a></button></td>
+                        target='_blank'>Buy Now</a>
+                </button>
+            </td>
             <td>
                 <ul>
                     <li>Waterproof</li>
@@ -74,8 +147,9 @@
         <tr>
             <th><img src="phone4.jpg" alt="4th Top Selling Phone" style="width:200px;height:100px;">
             <td>Hot Phone 4 <br> <button type="button"> <a
-                        href="https://www.amazon.co.uk/Ulefone-Note-Smartphones-Unlocked-Fingerprint/dp/B07V1PKPFX/ref=redir_mobile_desktop?ie=UTF8&aaxitk=nZgjyPUNVB5z4VYBu.PekA&hsa_cr_id=8159910840502&ref_=sbx_be_s_sparkle_mcd_asin_1"
-                        target="_blank">Buy Now</a></button></td>
+                        href='https://www.amazon.co.uk/Ulefone-Note-Smartphones-Unlocked-Fingerprint/dp/B07V1PKPFX/ref=redir_mobile_desktop?ie=UTF8&aaxitk=nZgjyPUNVB5z4VYBu.PekA&hsa_cr_id=8159910840502&ref_=sbx_be_s_sparkle_mcd_asin_1'
+                        target='_blank'>Buy Now</a></button>
+            </td>
             <td>
                 <ul>
                     <li>Waterproof</li>
@@ -87,9 +161,11 @@
         </tr>
         <tr>
             <th><img src="phone5.jpg" alt="5th Top Selling Phone" style="width:200px;height:100px;">
-            <td>Hot Phone 5<br> <button type="button"> <a
-                        href="https://www.amazon.co.uk/Ulefone-Note-Smartphones-Unlocked-Fingerprint/dp/B07V1PKPFX/ref=redir_mobile_desktop?ie=UTF8&aaxitk=nZgjyPUNVB5z4VYBu.PekA&hsa_cr_id=8159910840502&ref_=sbx_be_s_sparkle_mcd_asin_1"
-                        target="_blank">Buy Now</a></button></td>
+            <td>Hot Phone 5<br>
+                <button type="button"><a
+                        href='https://www.amazon.co.uk/Ulefone-Note-Smartphones-Unlocked-Fingerprint/dp/B07V1PKPFX/ref=redir_mobile_desktop?ie=UTF8&aaxitk=nZgjyPUNVB5z4VYBu.PekA&hsa_cr_id=8159910840502&ref_=sbx_be_s_sparkle_mcd_asin_1'>Buy
+                        Now</button></a>
+            </td>
             <td>
                 <ul>
                     <li>Waterproof</li>
@@ -123,6 +199,20 @@
             <input type="button" id="saveButton" value="SAVE DATA" onclick="saveData()" />
         </div>
     </div>
+    <div class="mapouter">
+        <div class="gmap_canvas"><iframe width=100%; height="215" id="gmap_canvas"
+                src="https://maps.google.com/maps?q=1404%20cider%20knoll%20way%2C%20west%20chester%2C%20pa%2019382&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+    </div>
+    <div id='footer'>
+        <p class='address'>Stephanie's Smartphone Shop Website <br>
+            1404 Cider Knoll Way <br>
+            West Chester, PA 19382<br>
+            United States <br>
+        </p>
+        <p class='instagram'><a href="https://www.instagram.com/original_cheap_phones/" target="_blank'">Follow
+                Us on Instagram</a></p>
+    </div>
     <script>
         function saveData() {
             let nameInput = document.querySelector('#name')
@@ -142,92 +232,36 @@
             emailInput.value = ''
             messageInput.value = ''
         }
-    </script>
-    </div>
-    <div class="mapouter">
-        <div class="gmap_canvas"><iframe width=100%; height="215" id="gmap_canvas"
-                src="https://maps.google.com/maps?q=1404%20cider%20knoll%20way%2C%20west%20chester%2C%20pa%2019382&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                href="https://www.whatismyip-address.com/nordvpn-coupon/"></a></div>
-        <style>
-            .mapouter {
-                position: relative;
-                text-align: right;
-                height: 215px;
-                width: 1037px;
-            }
 
-            .gmap_canvas {
-                overflow: hidden;
-                background: none !important;
-                height: 215px;
-                width: 1037px;
-            }
-        </style>
-    </div>
-    <div class='footer'>
-        <div class='footer-item footer-one'></div>
-        <div class='footer-item footer-two'>
-            <div>
-                <p class='address'>Stephanie's Smartphone Shop Website <br>
-                    1404 Cider Knoll Way <br>
-                    West Chester, PA 19382<br>
-                    United States <br>
-                </p>
-                <p class='instagram'><a href="https://www.instagram.com/original_cheap_phones/" target="_blank'">Follow
-                        Us on Instagram</a></p>
-            </div>
-        </div>
-        <div class='footer-item footer-three'></div>
 
-    </div>
-    <!-- Starting from D6's exercise, use your Smartphone Shop Website and implement the following exercises-->
-    <script>
-        /*EXERCISE 1 
-           Create a new welcome alert message when the page successfully loads
-          */
+        // <!-- Starting from D6's exercise, use your Smartphone Shop Website and implement the following exercises-->
         window.onload = function () {
-            console.log('page has successfully loaded')
+            console.log("Stephanie's Smartphone Shop Website has successfully loaded")
         }
-        /* EXERCISE 2
-            Write a function to change the Title of the page in something else (execute the function in browser console)
-        */
-        const changeTitle = function () {
+
+        function changeTitle() {
             document.querySelector('title').innerText = "Stephanie's Not-So-Smart Phone Shop"
         };
-        /* EXERCISE 3a
-            Write a function to add a class to the page's h1 title in "red-color" (execute the function when title is hovered by mouse).
-        */
-        const addClassToTitle = function () {
-            document.querySelector('h1').addEventListener("mouseover", mouseOver).style.color = "red"
+
+        function addClassToTitle() {
+            let h1Title = document.querySelector(".Heading1")
+            h1Title.classList.add("#mystyleh1");
         };
-        /* EXERCISE 3b
-            Write a function to remove "red-color" class from previous h1 (execute the function when the mouse leaves the title).
-        */
-        const removeClassFromTitle = function () {
-            document.querySelector('h1').addEventListener("mouseover", mouseOut).style.color = "black"
+        const removeClassToTitle = function () {
+            let h1Title = document.querySelector(".Heading1")
+            h1Title.classList.remove("#mystyleh1");
         };
+
         /* EXERCISE 4
             Add the following html snippet to your page:
-                <h2 id="listTitle">Todo List</h2>
-                <ul id="firstList">
-                    <li><p>1st</p></li>
-                    <li>2nd</li>
-                    <li>3rd</li>
-                </ul>
-                <ul id="secondList">
-                    <li>1st</li>
-                    <li>2nd</li>
-                    <li>3rd</li>
-                </ul>
-                <div>
-                    <p>This text is just for the exercise</p>
-                </div>
+ 
         Write a function to change the text of only the p which are child of a div (execute the function by assigning it to a button's click event)
         */
-        const changePContent = function () {
-            document.querySelectorAll("p")[1].innerText = ".exercise the for just text This"
-        };
+
+        function changePContent() {
+            let newText = document.querySelectorAll("p")[1]
+            newText.innerText = ".exercise the for just text This"
+        }
 
         /* EXERCISE 5
             Write a function to change the list title (you can use previous day's textarea as input or create a new text input field to grab the content)
@@ -261,7 +295,7 @@
         const paintItGreen = function () {
             let allUL = document.querySelectorAll("ul")
             undefined
-            for (let i = 0; i < allUL.length; i++) { if (i < allUL.length) allUL[i].style.backgroundColor = "green" }
+            for (let i = 0; i < allUL.length; { if(i <allUL.length) allUL[i].style.backgroundColor = "green" }
 
         };
 
@@ -291,3 +325,4 @@
           Refactor your HTML code with HTML5 semantic tags such as header, section, footer, etc
       */
     </script>
+</body>
