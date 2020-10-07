@@ -11,7 +11,7 @@
             background: black;
         }
 
-        #mystyleh1 {
+        .mystyleh1 {
             color: red;
         }
 
@@ -62,13 +62,18 @@
             onmouseleave="removeClassToTitle()">
             Stephanie's Smartphone Shop Website</h1>
         <div id="Button_functions">
-            <button id="Change_Title" onclick="changeTitleD6()">Change Title</button>
-            <button id="Change_BG" onclick="changeBg()">Change BG</button>
+            <button id="Change_BG" onclick="changeBg()">Make Listed Items Green</button>
+        </div>
+        <div id="Button_functions">
+            <button id="Change_BG" onclick="makeItClickable()">Change Header Color</button>
         </div>
     </header>
     <h2 id="Top 5 products">Top 5 products </h2>
     <h3>See what phones are flying out of our store this week!</h3>
     <h2 id="listTitle">To do List</h2>
+    <div id="Button_functions">
+        <button id="Change_BG" onclick="firstUlDisappear()">Remove First List</button>
+    </div>
     <ul id="firstList">
         <li>
             <p>1st</p>
@@ -82,9 +87,11 @@
         <li>3rd</li>
     </ul>
     <div>
-        <p>This text is just for the exercise</p><button onclick="changePContent()">Click me to change
-            text</button>
-
+        <p>This text is just for the exercise</p>
+        <div id="Button_functions">
+            <button id="Change_BG" onclick="changePContent()">Click me to change
+                text</button>
+        </div>
     </div>
     <table style="width:100%">
         <tr>
@@ -244,12 +251,12 @@
         };
 
         function addClassToTitle() {
-            let h1Title = document.querySelector(".Heading1")
-            h1Title.classList.add("#mystyleh1");
+            let h1Title = document.querySelector(".Heading1") /*can be any thing when you are using query, that is why you need . or # */
+            h1Title.classList.add("mystyleh1"); /* "." means class, but if it knows it is a class, you dont need to specifiy*/
         };
-        const removeClassToTitle = function () {
+        function removeClassToTitle() {
             let h1Title = document.querySelector(".Heading1")
-            h1Title.classList.remove("#mystyleh1");
+            h1Title.classList.remove("mystyleh1");
         };
 
         /* EXERCISE 4
@@ -261,12 +268,13 @@
         function changePContent() {
             let newText = document.querySelectorAll("p")[1]
             newText.innerText = ".exercise the for just text This"
+            return newText.innerText
         }
 
         /* EXERCISE 5
             Write a function to change the list title (you can use previous day's textarea as input or create a new text input field to grab the content)
         */
-        const changeListTitle = function (content) {
+        function changeListTitle(content) {
             document.querySelector("#listTitle").innerText = "The List is Done"
         };
         /* EXERCISE 6
@@ -283,44 +291,39 @@
         /* EXERCISE 7
             Write a function to make the first UL disappear (button)
         */
-        const firstUlDisappear = function () {
+        function firstUlDisappear() {
             let firstListRemove = document.querySelector("#firstList")
-            undefined
             document.querySelector('body').removeChild(firstListRemove)
-
         };
         /* EXERCISE 8
             Write a function to make the background of every UL green (button)
         */
-        const paintItGreen = function () {
+        function changeBg() {
             let allUL = document.querySelectorAll("ul")
-            undefined
-            for (let i = 0; i < allUL.length; { if(i <allUL.length) allUL[i].style.backgroundColor = "green" }
-
+            for (let i = 0; i < allUL.length; i++) {
+                if (i < allUL.length) allUL[i].style.backgroundColor = "green"
+            }
         };
-
         /* EXERCISE 9
             Add a "magnifier function" to the table.
             When the user mouse goes on a table cell (not the image one) the font size must increase.
             HINT use mouseenter / mouseleave events
         */
-        const makeThemMagnifiable = function () { };
+        function makeThemMagnifiable() { };
         /* EXERCISE 10
             Add a button to toggle all the product images (toggle => if visible, hide, if not visible, show)
         */
-        const toggleShowImages = function () { };
+        function toggleShowImages() { };
 
         //##### EXTRA
 
         /* EXERCISE 11
             Make the heading of the page change color radomly every time the user clicks on it
             */
-        const makeItClickable = function () {
-            document.querySelector('h1').addEventListener(onclick, makeItClickable)
+        function makeItClickable() {
             let myH1 = document.querySelector('h1');
-            myH1.style.color = "rgb(" + (Math.floor(Math.random() * 256)) + "," + (Math.floor(Math.random() * 256)) + "," + (Math.floor(Math.random() * 256)) + ")"
+            myH1.style.background = "rgb(" + (Math.floor(Math.random() * 256)) + "," + (Math.floor(Math.random() * 256)) + "," + (Math.floor(Math.random() * 256)) + ")"
         };
-
         /*EXERCISE 12
           Refactor your HTML code with HTML5 semantic tags such as header, section, footer, etc
       */
